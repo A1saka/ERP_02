@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  ERP_02
+//
+//  Created by Skylab on 16/10/30.
+//  Copyright © 2016年 Skylab. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+PCExtension.h"
+#import "NSDictionary+NSDictionary.h"
+
+#ifdef DEBUG
+#define ATLog(...) NSLog(__VA_ARGS__)
+#else
+#define ATLog(...)
+#endif
+
+#define ATLogFunc ATLog(@"%s",__func__)
+
+
+
+#define ATRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define ATGlobalBg ATRGBColor(223,223,223)
+
+#endif
